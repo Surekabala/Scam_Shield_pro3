@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScamShield AI – Spot scam emails instantly</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/></svg></span>
+      <span class="brand-text">ScamShield <em>AI</em></span>
+    </a>
+    <nav class="links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#demo">Live demo</a>
+      <a href="#install">Install</a>
+    </nav>
+    <a href="#install" class="btn btn-grad btn-sm">
+      <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg> Download
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <span class="pill pill-teal">Free Gmail extension</span>
+      <h1>Stop scam emails <span class="grad-text">before you click.</span></h1>
+      <p class="sub">ScamShield AI color-codes your inbox in real time and explains exactly why an email looks risky — all running locally in your browser.</p>
+      <div class="hero-cta">
+        <a href="#install" class="btn btn-grad">Download extension</a>
+        <a href="#demo" class="btn btn-ghost">Try the live demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <div class="container">
+      <h2>How it works</h2>
+      <p class="sub">Three steps. Zero configuration.</p>
+      <div class="grid3">
+        <article class="card step reveal"><div class="num">01</div><h3>Email arrives</h3><p>ScamShield reads subject, sender, preview, and links from your inbox DOM.</p></article>
+        <article class="card step reveal"><div class="num">02</div><h3>Engine runs</h3><p>Keyword scan, link analysis, sender reputation, and urgency amplifier compute a risk score.</p></article>
+        <article class="card step reveal"><div class="num">03</div><h3>Inbox color-coded</h3><p>Each row is tinted green, yellow, or red. Open the email for a full breakdown panel.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section alt">
+    <div class="container">
+      <h2>Everything you need to spot a scam</h2>
+      <p class="sub">Six layers of detection running locally in your browser.</p>
+      <div class="grid3">
+        <article class="card feat reveal"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><h3>Email risk scoring</h3><p>Each inbox row is colored green / yellow / red based on a 0–100 risk score.</p></article>
+        <article class="card feat reveal"><span class="ico"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></span><h3>Link verification</h3><p>Catches typosquatting, fake TLDs, shorteners, and brand impersonation.</p></article>
+        <article class="card feat reveal"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 4l9 16H3L12 4zM12 10v4M12 17v.5"/></svg></span><h3>6 scam categories</h3><p>Job, loan, banking, e-commerce, credential theft, and legal threats.</p></article>
+        <article class="card feat reveal"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/></svg></span><h3>Sender reputation</h3><p>Flags official-sounding names from free providers like Gmail/Yahoo.</p></article>
+        <article class="card feat reveal"><span class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span><h3>100% on-device</h3><p>Nothing leaves your browser. No API calls, no tracking, no accounts.</p></article>
+        <article class="card feat reveal"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/></svg></span><h3>Instant results</h3><p>Scans run in milliseconds as you open Gmail — zero workflow disruption.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="section">
+    <div class="container">
+      <div class="center"><span class="pill pill-teal">⚡ Live demo</span></div>
+      <h2>Type an email. Watch the score update live.</h2>
+      <p class="sub">Same engine that powers the extension — running right here in your browser.</p>
+
+      <div class="demo">
+        <div class="panel form">
+          <div class="samples">
+            <span>Try a sample:</span>
+            <button class="chip" data-sample="scam"><i class="dot red"></i>Scam</button>
+            <button class="chip" data-sample="suspicious"><i class="dot yellow"></i>Suspicious</button>
+            <button class="chip" data-sample="safe"><i class="dot green"></i>Safe</button>
+          </div>
+          <div class="row2">
+            <label>Sender name<input id="sName" type="text"></label>
+            <label>Sender email<input id="sEmail" type="text"></label>
+          </div>
+          <label>Subject<input id="subject" type="text"></label>
+          <label>Email body<textarea id="body" rows="9"></textarea></label>
+        </div>
+
+        <div class="panel result">
+          <div class="result-top">
+            <div class="ring" id="ring">
+              <svg viewBox="0 0 120 120">
+                <circle class="track" cx="60" cy="60" r="52"/>
+                <circle class="bar" id="bar" cx="60" cy="60" r="52"/>
+              </svg>
+              <div class="ring-text"><b id="score">0</b><small>/ 100</small></div>
+            </div>
+            <div class="verdict">
+              <span class="badge safe" id="badge">Safe</span>
+              <p id="summary">No significant threats detected.</p>
+              <div class="tags" id="tags"></div>
+            </div>
+          </div>
+          <h4>Detection details</h4>
+          <div id="details"></div>
+          <h4>Links found</h4>
+          <div id="links"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="install" class="install">
+    <div class="container">
+      <h2>Install in under 60 seconds</h2>
+      <p class="sub">Manual install — no Chrome Web Store account required.</p>
+      <div class="glass">
+        <ol>
+          <li><b>1</b>Click “Download ZIP” below to grab the extension.</li>
+          <li><b>2</b>Unzip the file anywhere on your computer.</li>
+          <li><b>3</b>Open chrome://extensions in Chrome (or any Chromium browser).</li>
+          <li><b>4</b>Toggle Developer mode in the top-right corner.</li>
+          <li><b>5</b>Click Load unpacked and select the unzipped scam-shield-v2 folder.</li>
+          <li><b>6</b>Open Gmail — emails are color-coded automatically.</li>
+        </ol>
+        <a href="ScamShield_v2.zip" download class="btn btn-white">
+          <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg> Download ScamShield_v2.zip
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>ScamShield AI · Built for safer inboxes · 100% local, 100% free</footer>
+<script src="script.js"></script>
+</body>
+</html>
